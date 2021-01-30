@@ -1,0 +1,10 @@
+main:proc.o main.o
+	gcc -o main proc.o main.o
+main.o:main.c
+	gcc -c main.c
+proc.o:proc.c
+	gcc -c proc.c
+
+.PHONY:clean
+clean:
+	rm -f *.o main
